@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN" "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+
+<tiles-definitions>
+
+    <!-- Base Definition -->
+    <definition name="base-layout" template="/WEB-INF/views/tiles/base.jsp">
+        <put-attribute name="title" value="" />
+        <put-attribute name="header" value="/WEB-INF/views/tiles/header.jsp" />
+        <put-attribute name="menu" value="" />
+        <put-attribute name="body" value="" />
+        <put-attribute name="pagination" value="" />
+    </definition>
+
+    <!-- Base Empty Definition -->
+    <definition name="base-empty-layout" template="/WEB-INF/views/tiles/baseEmpty.jsp">
+        <put-attribute name="title" value="" />
+        <put-attribute name="header" value="/WEB-INF/views/tiles/header.jsp" />
+        <put-attribute name="body" value="" />
+        <put-attribute name="pagination" value="" />
+    </definition>
+
+    <!-- Home Page -->
+    <definition name="home" extends="base-empty-layout">
+        <put-attribute name="body" value="/WEB-INF/views/home.jsp" />
+        <put-attribute name="pagination" value="/WEB-INF/views/tiles/pagination.jsp" />
+    </definition>
+
+    <!-- Error Page -->
+    <definition name="error" extends="base-empty-layout">
+        <put-attribute name="body" value="/WEB-INF/views/error.jsp" />
+    </definition>
+
+    <!-- Sale Detail Page -->
+    <definition name="sale/saleDetail" extends="base-empty-layout">
+        <put-attribute name="body" value="/WEB-INF/views/sale/saleDetail.jsp" />
+    </definition>
+
+
+
+    <!-- Other Page -->
+    <definition name="*/*" extends="base-layout">
+        <put-attribute name="menu" value="/WEB-INF/views/tiles/menu.jsp" />
+        <put-attribute name="body" value="/WEB-INF/views/{1}/{2}.jsp" />
+        <put-attribute name="pagination" value="/WEB-INF/views/tiles/pagination.jsp" />
+    </definition>
+
+</tiles-definitions>

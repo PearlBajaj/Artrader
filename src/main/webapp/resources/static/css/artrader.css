@@ -1,0 +1,54 @@
+div.border.border-card {
+    border-color: #dfdfdf;
+}
+
+#sidemenu .nav-pills .nav-link.active {
+    background-color: #f8f9fa;
+    color: #343a40!important;
+}
+
+.page-link {
+    color: #6c757d;
+}
+
+.page-item.active .page-link {
+    border-color: #ffc107;
+    background-color: #ffc107;
+}
+
+form {
+    margin-block-end: 0;
+}
+
+span.navbar-brand {
+    background-image: url('/resources/static/img/logo_bg.png');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;"
+}
+span.navbar-brand.logo-l {
+    font-size: 3rem;
+}
+
+.text-truncate-3 {
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+}
+
+.card-title .oi.oi-heart {
+    color: lightgray;
+    cursor: pointer;
+    border: 0;
+    background-color: transparent;
+}
+.card-title .oi.oi-heart.active, .card-title .oi.oi-heart:hover {
+    color: red;
+}
+
+.card div.card-footer.empty {
+    background-color: transparent;
+    border-top: 0;
+}
